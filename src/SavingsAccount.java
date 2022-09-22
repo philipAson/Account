@@ -14,9 +14,8 @@ public class SavingsAccount extends Account {
         double interest = (interestRate/100) * balance;
         System.out.println("The interest of your balance with a " + interestRate +"% interest rate is: "
                 + interest + ".\n The total amount of your savings-account with interest is: " + (interest + balance));
-
-
-
+        
     }
+
 
 }

@@ -1,15 +1,23 @@
 public class Main {
     public static void main(String[] args) {
 
-        Account saveingsaccount = new SavingsAccount("spar1", 2000, 3);
-        Account salaaryAccount = new Account("a1", 2000);
-        salaaryAccount.withdraw(100);
-        salaaryAccount.deposit(2400);
-        System.out.println(salaaryAccount.balance);
-        System.out.println(salaaryAccount);
-        salaaryAccount.withdraw(300);
-        System.out.println(salaaryAccount.balance);
-        ((SavingsAccount) saveingsaccount).addInterest();
+        SavingsAccount saveingsaccount = new SavingsAccount("spar1", 2000, 3);
+        Account salaryAccount = new Account("a1", 2000);
+        
+        salaryAccount.withdraw(100);
+        salaryAccount.deposit(2400);
+
+        System.out.println(salaryAccount);
+        
+        salaryAccount.withdraw(300);
+
+        saveingsaccount.addInterest();
+
+        System.out.println(salaryAccount);
+        System.out.println(saveingsaccount);
+
+        saveingsaccount.transfer(200, salaryAccount);
+
 
     }
 }

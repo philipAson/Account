@@ -32,7 +32,7 @@ public class Account {
     }
     // Method that sets name
     public void setName(String name) {
-        this.balance = balance;
+        this.name = name;
 
     }
     // Method that gets name
@@ -45,4 +45,19 @@ public class Account {
         return name + " balance \n:" + balance;
 
     }
+    // Method that transfer from SavingsAccount to a Account
+    public void transfer(double amount, Account acc) {
+        if(this.balance < amount) {
+            System.out.println("The amount requested is to big, try a smaller amount");
+        }
+        else {
+            this.balance = balance - amount;
+            acc.balance = acc.balance + amount;
+
+            System.out.println(this.name + " has " + this.balance);
+            System.out.println(acc.name + " has " + acc.balance);
+        }
+
+    }
+
 }
